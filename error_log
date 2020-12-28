@@ -1,0 +1,37 @@
+[19-Nov-2020 11:58:41 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/viukv08mgggt/wecake/bootstrap/app.php:14
+Stack trace:
+#0 /home/viukv08mgggt/wecake/artisan(20): require_once()
+#1 {main}
+  thrown in /home/viukv08mgggt/wecake/bootstrap/app.php on line 14
+[19-Nov-2020 12:00:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/viukv08mgggt/wecake/bootstrap/app.php:14
+Stack trace:
+#0 /home/viukv08mgggt/wecake/artisan(20): require_once()
+#1 {main}
+  thrown in /home/viukv08mgggt/wecake/bootstrap/app.php on line 14
+[19-Nov-2020 12:00:44 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/viukv08mgggt/wecake/bootstrap/app.php:14
+Stack trace:
+#0 /home/viukv08mgggt/wecake/artisan(20): require_once()
+#1 {main}
+  thrown in /home/viukv08mgggt/wecake/bootstrap/app.php on line 14
+[19-Nov-2020 12:01:08 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/viukv08mgggt/wecake/bootstrap/app.php:14
+Stack trace:
+#0 /home/viukv08mgggt/wecake/artisan(20): require_once()
+#1 {main}
+  thrown in /home/viukv08mgggt/wecake/bootstrap/app.php on line 14
+[19-Nov-2020 12:02:16 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/viukv08mgggt/wecake/bootstrap/app.php:14
+Stack trace:
+#0 /home/viukv08mgggt/wecake/artisan(20): require_once()
+#1 {main}
+  thrown in /home/viukv08mgggt/wecake/bootstrap/app.php on line 14
+[19-Nov-2020 12:05:24 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/viukv08mgggt/wecake/bootstrap/app.php:14
+Stack trace:
+#0 /home/viukv08mgggt/wecake/artisan(20): require_once()
+#1 {main}
+  thrown in /home/viukv08mgggt/wecake/bootstrap/app.php on line 14
+[19-Nov-2020 12:16:07 UTC] PHP Warning:  require(/home/viukv08mgggt/wecake/vendor/autoload.php): failed to open stream: No such file or directory in /home/viukv08mgggt/wecake/artisan on line 18
+[19-Nov-2020 12:16:07 UTC] PHP Fatal error:  require(): Failed opening required '/home/viukv08mgggt/wecake/vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/viukv08mgggt/wecake/artisan on line 18
+[19-Nov-2020 12:17:08 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/viukv08mgggt/wecake/bootstrap/app.php:14
+Stack trace:
+#0 /home/viukv08mgggt/wecake/artisan(20): require_once()
+#1 {main}
+  thrown in /home/viukv08mgggt/wecake/bootstrap/app.php on line 14
