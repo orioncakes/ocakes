@@ -21,7 +21,7 @@ class User extends Authenticatable implements JWTSubject
      */
     protected $fillable = [
         'name', 'email', 'phone', 'is_local', 'is_active', 'password','ip_address',
-        'role_id'
+        'role_id',
     ];
 
     protected $hidden = [
@@ -35,7 +35,7 @@ class User extends Authenticatable implements JWTSubject
      */
     protected $casts = [
         'deleted_at' => 'datetime',
-        'ip_address'=>'ipaddress'
+        // 'ip_address'=>'ip_address'
     ];
     public function getJWTIdentifier(){
         return $this->getKey();
