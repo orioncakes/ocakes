@@ -50,7 +50,7 @@ class AuthController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|between:2,100',
             'email' => 'required|string|email|max:100|unique:users',
-            'password' => 'required|string|confirmed|min:6',
+            'password' => 'required|string|min:6',
             'phone' => 'required'
         ]);
 
@@ -62,13 +62,22 @@ class AuthController extends Controller
                     $validator->validated(),
                     ['password' => bcrypt($request->password), 'role_id'=>1, 'ip_address'=>$_SERVER['REMOTE_ADDR']]
                 ));
-
+                $token = auth()->login($user);
+        $user->token = $this->respondWithToken($token);
         return response()->json([
             'message' => 'User successfully registered',
             'user' => $user
         ], 201);
     }
 
+    protected function respondWithToken($token)
+    {
+      return response()->json([
+        'access_token' => $token,
+        'token_type' => 'bearer',
+        'expires_in' => null
+      ]);
+    }
 
     /**
      * Log the user out (Invalidate the token).
