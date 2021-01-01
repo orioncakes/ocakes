@@ -19,6 +19,7 @@ class MasterCategories extends JsonResource
         return [
             'id' => $this->id,
             'category_name' => $this->category_name,
+            'category_image' => $this->category_image,
         ];
     }
 }

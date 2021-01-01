@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\MasterCategory;
 use App\Http\Resources\MasterCategories as MasterCategoryResource;
+use Storage;
 
 class MasterCategoryController extends Controller
 {
@@ -26,8 +27,10 @@ class MasterCategoryController extends Controller
 
     public function store(Request $request)
     {
+      Storage::disk('public')->put('category_image/'.$request->file('category_image')->getClientOriginalName(),$request->file('category_image')->get());
       $cateogry = MasterCategory::create([
         'category_name' => $request->category_name,
+        'category_image' => 'category_image/'.$request->file('category_image')->getClientOriginalName()
       ]);
       $newly_created_cateogry = new MasterCategoryResource($cateogry);
       $data = array(
