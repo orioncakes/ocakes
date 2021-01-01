@@ -7,6 +7,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MasterCategoryController;
 use App\Http\Controllers\MasterFlavourController;
+use App\Http\Controllers\MasterWeightController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -36,6 +38,7 @@ use App\Http\Controllers\MasterFlavourController;
         
         Route::apiResource('/categories', MasterCategoryController::class);
         Route::apiResource('/flavours', MasterFlavourController::class);
+        Route::apiResource('/weights', MasterWeightController::class);
         // Route::get('/category', [MasterCategoryController::class, 'index']);
         // Route::get('/category', function () {
         //     return MasterCategoriesResource::collection(MasterCategory::all());
