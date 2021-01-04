@@ -44,4 +44,9 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims(){
         return [];
     }
+
+    public function seller()
+    {
+      return $this->belongsTo(Seller::class);
+    }
 }
