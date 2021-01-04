@@ -14,7 +14,7 @@ class SellerController extends Controller
     }
     public function index()
     {
-        $sellers = SellerResource::collection(Seller::paginate(25));
+        $sellers = SellerResource::collection(Seller::with('user')->paginate(25));
         $data = array(
             "status" => true,
             "status_code" => 1000,

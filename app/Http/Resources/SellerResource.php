@@ -30,7 +30,7 @@ class SellerResource extends JsonResource
             'is_active' => $this->is_active,
             'is_open' => $this->is_open,
             'user_id' => $this->user_id,
-            'user'=> $this->users
+            'user'=> $this->user
         ];
     }
 }

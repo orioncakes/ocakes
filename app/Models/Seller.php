@@ -10,9 +10,9 @@ class Seller extends Model
     use HasFactory;
     protected $fillable = ['seller_name','seller_mobile_no','seller_shop_name','seller_address','seller_city','seller_state','seller_pincode','seller_lat','seller_long','ip_address','user_id','is_active','is_open'];
     
-    public function users()
+  
+    public function user()
     {
-      return $this->hasMany(User::class);
+        return $this->belongsTo(User::class)->select(array('id','name','email','phone'));
     }
-
 }
