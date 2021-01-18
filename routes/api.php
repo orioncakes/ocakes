@@ -12,6 +12,8 @@ use App\Http\Controllers\MasterTimeSlotController;
 use App\Http\Controllers\MasterAddressTypeController;
 use App\Http\Controllers\SellerController;
 use App\Http\Controllers\CakeController;
+use App\Http\Controllers\CakeWeightController;
+
 
 
 /*
@@ -44,10 +46,11 @@ use App\Http\Controllers\CakeController;
         Route::apiResource('/categories', MasterCategoryController::class);
         Route::apiResource('/flavours', MasterFlavourController::class);
         Route::apiResource('/weights', MasterWeightController::class);
-        Route::apiResource('/time_slots', MasterTimeSlotController::class);
+        Route::apiResource('/time-slots', MasterTimeSlotController::class);
         Route::apiResource('/address_types', MasterAddressTypeController::class);
         Route::apiResource('/sellers', SellerController::class);
         Route::apiResource('/cakes', CakeController::class);
+        Route::apiResource('/cake-weights', CakeWeightController::class);
 
         // Route::get('/category', [MasterCategoryController::class, 'index']);
         // Route::get('/category', function () {
