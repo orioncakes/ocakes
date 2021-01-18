@@ -11,6 +11,7 @@ use App\Http\Controllers\MasterWeightController;
 use App\Http\Controllers\MasterTimeSlotController;
 use App\Http\Controllers\MasterAddressTypeController;
 use App\Http\Controllers\SellerController;
+use App\Http\Controllers\CakeController;
 
 
 /*
@@ -46,6 +47,8 @@ use App\Http\Controllers\SellerController;
         Route::apiResource('/time_slots', MasterTimeSlotController::class);
         Route::apiResource('/address_types', MasterAddressTypeController::class);
         Route::apiResource('/sellers', SellerController::class);
+        Route::apiResource('/cakes', CakeController::class);
+
         // Route::get('/category', [MasterCategoryController::class, 'index']);
         // Route::get('/category', function () {
         //     return MasterCategoriesResource::collection(MasterCategory::all());
