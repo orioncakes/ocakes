@@ -97,4 +97,38 @@ class CakeController extends Controller
         // return $data; 
       return response()->json($data, 204);
     }
+
+    public function cake_filter(Request $request)
+    {
+      $data = array('status'=>false, 'status_code'=>999, 'data'=>'Init Failed');
+      
+      if($request->filter_type){
+        
+        $data = $this->getFilterBasedCake($request->filter_type);
+        
+      }else{
+        $data = array('status'=>false, 'status_code'=>999, 'data'=>'No Filter Provided');
+      }
+
+      return response()->json($data, 200);
+    
+    }
+
+   
+    public function getFilterBasedCake($cat_id){
+      
+      $cakes = CakeResource::collection(Cake::whereCakeCategoryId($cat_id)->whereIsAvailable(1)->get());
+
+      if(count( $cakes ) ==0 ){
+        $cakes = CakeResource::collection(Cake::whereIsAvailable(1)->get());
+      }
+      $data = array(
+        "status" => true,
+        "status_code" => 1000,
+        "data" => $cakes
+      );
+      
+      return $data;
+
+  }
 }

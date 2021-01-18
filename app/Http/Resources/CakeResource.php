@@ -31,7 +31,8 @@ class CakeResource extends JsonResource
             'is_veg' => $this->is_veg,
             'ip_address' => $this->ip_address,
             'created_by' => $this->created_by,
-            'is_best_seller' => $this->is_best_seller
+            'is_best_seller' => $this->is_best_seller,
+            'cake_weight'=> $this->cake_weight,
         ];
     }
 }

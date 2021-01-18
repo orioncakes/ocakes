@@ -15,4 +15,11 @@ class Seller extends Model
     {
         return $this->belongsTo(User::class)->select(array('id','name','email','phone'));
     }
+
+    // public function cake_weight()
+    // {
+    //   return $this->belongsTo(CakeWeight::class);
+    // }
+
+
 }

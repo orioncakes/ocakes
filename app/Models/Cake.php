@@ -10,7 +10,16 @@ class Cake extends Model
     use HasFactory;
     protected $fillable = ['cake_name','cake_image','cake_description','cake_category_id','short_url','is_available','flavour_id','like_counts','ratings','is_veg','ip_address','created_by','is_best_seller'];
     
-  
+    // public function cake_weight()
+    // {
+    //   return $this->belongsTo(CakeWeight::class);
+    // }
+
+    public function cake_weight()
+    {
+        return $this->hasMany(CakeWeight::class);
+    }
+
     // public function user()
     // {
     //     return $this->belongsTo(User::class)->select(array('id','name','email','phone'));

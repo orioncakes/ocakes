@@ -52,6 +52,9 @@ use App\Http\Controllers\CakeWeightController;
         Route::apiResource('/cakes', CakeController::class);
         Route::apiResource('/cake-weights', CakeWeightController::class);
 
+        // CAKE HELPERS APIS
+        Route::post('/cake-filter', [CakeController::class,'cake_filter']);
+
         // Route::get('/category', [MasterCategoryController::class, 'index']);
         // Route::get('/category', function () {
         //     return MasterCategoriesResource::collection(MasterCategory::all());

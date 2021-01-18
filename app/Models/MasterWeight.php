@@ -10,5 +10,9 @@ class MasterWeight extends Model
     use HasFactory;
     protected $fillable = ['kgs','amount'];
     public $timestamps = false;
-
+    
+    // public function cake_weight()
+    // {
+    //   return $this->belongsTo(CakeWeight::class);
+    // }
 }

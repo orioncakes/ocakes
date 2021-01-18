@@ -21,6 +21,7 @@ class CakeWeightResource extends JsonResource
             'cake_id' => $this->cake_id,
             'weight_id' => $this->weight_id,
             'supplier_id' => $this->supplier_id,
+            'cake' => $this->cake
         ];
     }
 }
